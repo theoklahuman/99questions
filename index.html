@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>99 Questions</title>
-    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/style.css">
     <script src="../src/index.js" defer></script>
   </head>
   <body>
@@ -13,15 +13,16 @@
     <h3>Please pick a number between 0 and 99</h3>
     <form action="">
       <label for="question-number">
-        <input type="number" placeholder="enter number here" />
+        <input id="question-number__input" type="number" placeholder="enter number here" />
       </label>
-      <button type="submit">submit</button>
+      <button id="question-submit__button" type="button">Submit Question</button>
     </form>
     <section class="question-and-answer__section">
-      <div>You selected question xx</div>
+      <div class="chosen-question">You selected question xx</div>
       <label for="question-answer">
         <input type="text" placeholder="enter answer here" />
       </label>
+      <button type="submit">Submit Answer</button>
       <div class="question-display"></div>
     </section>
   </body>
