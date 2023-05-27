@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #0ab80a;
+}
+
+/* .question-and-answer__section {
+    display: none;
+} */
