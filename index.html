@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>99 Questions</title>
-    <link rel="stylesheet" href="../src/style.css">
-    <script src="../src/index.js" defer></script>
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <h1>Welcome to 99 Questions!</h1>
     <h3>Please pick a number between 0 and 99</h3>
-    <form action="">
-      <label for="question-number">
-        <input id="question-number__input" type="number" placeholder="enter number here" />
-      </label>
-      <button id="question-submit__button" type="button">Submit Question</button>
-    </form>
+    <div class="question-section">
+      <form action="">
+        <label for="question-number">
+          <input id="question-number__input" type="number" placeholder="Enter number here" />
+        </label>
+        <button id="question-submit__button" type="button">Submit Question</button>
+      </form>
+    </div>
     <section class="question-and-answer__section">
-      <div class="chosen-question">You selected question xx</div>
+      <div class="chosen-question">Your Selected Question will be shown here: </div>
       <label for="question-answer">
-        <input type="text" placeholder="enter answer here" />
+        <textarea id="user-answer" type="text" placeholder="Enter answer here" ></textarea>
       </label>
-      <button type="submit">Submit Answer</button>
+      <button id="answer-submit__button" type="button">Submit Answer</button>
       <div class="question-display"></div>
     </section>
   </body>
