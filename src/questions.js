@@ -114,6 +114,7 @@ function getQuestionFromQuestionList(questionNumber) {
     let selectedQuestion = `Question ${questionNumber}:  ${questions[questionPosition]}`;
     return selectedQuestion;
   } else {
+    hideAnswerSection();
     return invalidNumber;
   }
 }
