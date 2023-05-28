@@ -3,22 +3,30 @@
 }
 
 h1 {
-    color: magenta;
+    color: #f36060;
 }
 
 #question-number__input,
-#question-submit__button {
+#question-submit__button,
+#user-answer,
+#answer-submit__button {
     display: block;
     margin: 0.2rem;
 }
 
-.question-section {
+textarea {
+  width: 95vw;
+  height: 220px;
+}
+
+.question-section,
+.answer-section {
     display: flex;
     flex-direction: column;
 }
 
 body {
-  background: green;
+  background: #61f761;
 }
 
 .invisible {

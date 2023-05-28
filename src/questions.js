@@ -1,4 +1,5 @@
-let chosenQuestion = document.querySelector(".chosen-question");
+import hideAnswerSection from "./answer.js";
+let chosenQuestion = document.querySelector("#chosen-question__display");
 
 const questions = [
   "Name of your first crush?",
@@ -44,7 +45,7 @@ const questions = [
   "Does naughty talk get you aroused?",
   "Have you ever had a near death experience?",
   "If you had a pet, What would it be?",
-  "Are you Virgin?",
+  "Are you a Virgin?",
   "Do you have any tattoos?",
   "Are u single or in a relationship?",
   "Have you ever kissed someone of the same sex?",
@@ -101,6 +102,11 @@ function getChosenQuestionNumber() {
   return chosenQuestionNumber;
 }
 
+function hideQuestionSection() {
+  const questionSection = document.querySelector(".question-section");
+  questionSection.classList.toggle("invisible");
+}
+
 function getQuestionFromQuestionList(questionNumber) {
   let questionPosition = questionNumber - 1;
   const invalidNumber = `If you're having girl problems I feel bad for you son I got ninety-nine questions but ${questionNumber} ain't one`;
@@ -127,5 +133,6 @@ export default function testQuestionFlow() {
   let userChoice = getChosenQuestionNumber();
   const choseQuestion = getQuestionFromQuestionList(userChoice);
   displaySelectedQuestion(choseQuestion);
-  resetQuestionInputValue()
+  resetQuestionInputValue();
+  hideQuestionSection();
 }

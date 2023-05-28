@@ -12,19 +12,35 @@
     <h3>Please pick a number between 0 and 99</h3>
     <div class="question-section">
       <form action="">
-        <label for="question-number">
-          <input id="question-number__input" type="number" placeholder="Enter number here" />
+        <label for="question-number__input">
+          <input
+            id="question-number__input"
+            type="number"
+            required
+            placeholder="Enter number here"
+          />
         </label>
-        <button id="question-submit__button" type="button">Submit Question</button>
+        <button id="question-submit__button" type="button">
+          Submit Question
+        </button>
       </form>
     </div>
     <section class="question-and-answer__section">
-      <div class="chosen-question">Your Selected Question will be shown here: </div>
-      <label for="question-answer">
-        <textarea id="user-answer" type="text" placeholder="Enter answer here" ></textarea>
-      </label>
-      <button id="answer-submit__button" type="button">Submit Answer</button>
-      <div class="question-display"></div>
+      <div class="chosen-question">
+        <div id="chosen-question__display">Your Selected Question will be shown here:</div>
+      </div>
+      <div class="answer-section">
+        <label for="user-answer">
+          <textarea
+            id="user-answer"
+            type="text"
+            required
+            placeholder="Enter answer here"
+          ></textarea>
+        </label>
+        <button id="answer-submit__button" type="button">Submit Answer</button>
+        <div class="question-display"></div>
+      </div>
     </section>
   </body>
 </html>
