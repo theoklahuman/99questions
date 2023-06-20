@@ -1,5 +1,5 @@
 import hideAnswerSection from "./answer.js";
-let chosenQuestion = document.querySelector("#chosen-question__display");
+let chosenQuestionDisplay = document.querySelector("#chosen-question__display");
 
 const questions = [
   "Name of your first crush?",
@@ -98,7 +98,6 @@ function getChosenQuestionNumber() {
   let chosenQuestionNumber = document.getElementById(
     "question-number__input"
   ).value;
-  console.log(`you selected question ${chosenQuestionNumber}`);
   return chosenQuestionNumber;
 }
 
@@ -110,7 +109,7 @@ function hideQuestionSection() {
 function getQuestionFromQuestionList(questionNumber) {
   let questionPosition = questionNumber - 1;
   const invalidNumber = `If you're having girl problems I feel bad for you son I got ninety-nine questions but ${questionNumber} ain't one`;
-  if (questionNumber <= 90) {
+  if (questionNumber > 1 && questionNumber <= 90) {
     let selectedQuestion = `Question ${questionNumber}:  ${questions[questionPosition]}`;
     return selectedQuestion;
   } else {
@@ -127,13 +126,13 @@ function resetQuestionInputValue() {
 }
 
 function displaySelectedQuestion(userInput) {
-  chosenQuestion.textContent = userInput;
+  chosenQuestionDisplay.textContent = userInput;
 }
 
 export default function testQuestionFlow() {
   let userChoice = getChosenQuestionNumber();
-  const choseQuestion = getQuestionFromQuestionList(userChoice);
-  displaySelectedQuestion(choseQuestion);
+  const chosenQuestion = getQuestionFromQuestionList(userChoice);
+  displaySelectedQuestion(chosenQuestion);
   resetQuestionInputValue();
   hideQuestionSection();
 }
